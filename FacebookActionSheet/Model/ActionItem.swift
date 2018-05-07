@@ -22,14 +22,16 @@ public struct ActionItem {
     public var type: ItemType = .Normal
     public var onTapHandler: OnTapHandler?
 
-    public init (title: String?, subTitle: String?, iconFont: String?, onTap: OnTapHandler?) {
+
+
+    public init (title: String?, subTitle: String? = nil, iconFont: String? = nil, onTap: OnTapHandler? = nil) {
         self.title = title
         self.subTitle = subTitle
         self.iconFont = iconFont
         self.onTapHandler = onTap
     }
-    // normal type
-    public init (title: String?, iconFont: String?, type: ItemType) {
+
+    public init (title: String?, iconFont: String? = nil, type: ItemType) {
         self.title = title
         self.iconFont = iconFont
         self.type = type
